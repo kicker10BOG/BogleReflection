@@ -160,7 +160,8 @@ public class ClassReflection {
 	 * @param type		a string containing the name of the type that the type
 	 * 					should match - names can be "simple names" (for example: "Bar") 
 	 * 					or fully qualified names (for example: "com.foo.bar")
-	 * @return
+	 * @return	list of fields that are of the specified type
+	 * 			<br>empty list if none are found
 	 */
 	public List<Field> filterFieldsByType(List<Field> fields, String type) {
 		List<Field> filtered = new ArrayList<Field>();
