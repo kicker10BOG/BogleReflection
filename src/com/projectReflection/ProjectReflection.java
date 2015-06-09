@@ -23,7 +23,7 @@ public class ProjectReflection {
 
 	private static final char SLASH = '/';
 	
-	public static final ClassReflection CR = new ClassReflection();
+	public final ClassReflection CR = new ClassReflection();
 	
 	/**
 	 * Gets all classes that are loaded. 
@@ -272,6 +272,29 @@ public class ProjectReflection {
 		List<Class<?>> classes = getLoadedClassesFromPackage(packageName);
 		return getClass(className, classes);
 	}	
+	
+	/**
+	 * Gets any class, loaded or unloaded, that exists in the build path. 
+	 * 
+	 * @param className		string containing the name of the class to get - 
+	 * 						the name must be the fully qualified name (for 
+	 * 						example: "com.foo.Bar")
+	 * @return	the class searched for if found
+	 * 			<br>null if not found
+	 */
+	public Class<?> getClass(String className) {
+		List<Class<?>> loadedClasses = getAllLoadedClasses();
+		Class<?> theClass = getClass(className, loadedClasses);
+		if (theClass == null) {
+			try {
+				ClassLoader scl = ClassLoader.getSystemClassLoader();
+				theClass = scl.loadClass(className);
+			} catch (Exception e) {
+				return null;
+			}
+		}
+		return theClass;
+	}
 	
 	/**
 	 * Displays a structural mapping of each class in a list. 

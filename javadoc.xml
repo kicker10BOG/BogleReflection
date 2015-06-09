@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
     <target name="javadoc">
-        <javadoc 
-        	access="private" 
-        	classpath="." 
-        	packagenames="com.projectReflection"
-        	additionalparam="-pdf ./doc/documentation.pdf"
-        	sourcepath="src">
-        	
-            <doclet name="com.tarsec.javadoc.pdfdoclet.PDFDoclet" 
-            	path="C:\Users\Jason\workspace\pdfdoclet-1.0.3\jar\pdfdoclet-1.0.3-all.jar"/>
-        </javadoc>
+        <javadoc access="private" author="true" classpath="." destdir="./doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="com.projectReflection" source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
     </target>
 </project>

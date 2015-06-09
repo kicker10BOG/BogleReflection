@@ -197,13 +197,17 @@ public class ClassReflection {
 			//e.printStackTrace();
 		}
 		// Get methods
-		Method[] methods = theClass.getMethods();
-		if (methods.length > 0) {
-			System.out.println("  Methods:");
-			for (Method m : methods) {
-				// Print method protoype
-				System.out.println("  ->"+m.toString());
+		try {
+			Method[] methods = theClass.getDeclaredMethods();
+			if (methods.length > 0) {
+				System.out.println("  Methods:");
+				for (Method m : methods) {
+					// Print method prototype
+					System.out.println("  ->"+m.toString());
+				}
 			}
+		} catch (SecurityException e) {
+			//e.printStackTrace();
 		}
 	}
 }

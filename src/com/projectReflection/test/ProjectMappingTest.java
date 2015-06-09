@@ -24,8 +24,29 @@ public class ProjectMappingTest {
 
 		System.out.println("Test getAllLoadedClasses");
 		System.out.println("  getAllLoadedClasses()");
-		List<Class<?>> allLoadedClases = pr.getAllLoadedClasses();
-		pr.displayAll(allLoadedClases);
+		List<Class<?>> allLoadedClasses = pr.getAllLoadedClasses();
+		pr.displayAll(allLoadedClasses);
+		for (Class<?> c : allLoadedClasses) {
+			System.out.println(c.toGenericString());
+		}
+
+		System.out.println("\nTest getClass - getting a potentially unloaded class");
+		System.out.println("  getClass(\"com.projectReflection.test.RentCar\")");
+		Class<?> klass = pr.getClass("com.projectReflection.test.RentCar");
+		if (klass != null) {
+			pr.CR.display(klass);
+		}
+		else {
+			System.out.println("failed");
+		}
+		System.out.println("\n  getClass(\"java.util.Timer\")");
+		klass = pr.getClass("java.util.Timer");
+		if (klass != null) {
+			pr.CR.display(klass);
+		}
+		else {
+			System.out.println("failed");
+		}
 		
 		System.out.println("~~~~~~~~~~~~~~~");
 		System.out.println("End Project Mapping Test");

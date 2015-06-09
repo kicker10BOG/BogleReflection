@@ -5,12 +5,13 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.regex.Pattern;
 
+
 import com.projectReflection.ClassReflection;
 
 public class ClassReflectionTests {
 	public static void main(String[] args) {
 		ClassReflection cr = new ClassReflection();
-		Class<Airplane> theClass = Airplane.class;
+		Class<?> theClass = Airplane.class;
 		List<Method> methods = null;
 		List<Field> fields = null;
 		Field field = null;
@@ -98,5 +99,7 @@ public class ClassReflectionTests {
 		System.out.println("~~~~~~~~~~~~~~~");
 		System.out.println("End Class Field Tests");
 		System.out.println("~~~~~~~~~~~~~~~");
+
+
 	}
 }
