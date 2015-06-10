@@ -3,7 +3,6 @@
 	<name>BogleReflection</name>
 	<comment></comment>
 	<projects>
-		<project>reflections</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

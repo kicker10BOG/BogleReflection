@@ -1,4 +1,4 @@
-package com.projectReflection.test;
+package bogle.projectReflection.test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 
-import com.projectReflection.ClassReflection;
+
+import bogle.projectReflection.ClassReflection;
 
 public class ClassReflectionTests {
 	public static void main(String[] args) {
@@ -88,7 +89,7 @@ public class ClassReflectionTests {
 			System.out.println("  ->"+f.toGenericString());
 		}
 		
-		System.out.println("\nTest getFieldsByPattern");
+		System.out.println("\nTest FilterFieldsByType");
 		fields = cr.getFieldsByPattern(Pattern.compile(".*"), theClass);
 		fields = cr.filterFieldsByType(fields, "double");
 		System.out.println("  FilterFieldsByType(fields, \"double\")");

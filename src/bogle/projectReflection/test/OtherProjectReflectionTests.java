@@ -1,8 +1,8 @@
-package com.projectReflection.test;
+package bogle.projectReflection.test;
 
 import java.util.List;
 
-import com.projectReflection.ProjectReflection;
+import bogle.projectReflection.ProjectReflection;
 
 public class OtherProjectReflectionTests {
 	public static void main(String[] args) {
@@ -27,11 +27,11 @@ public class OtherProjectReflectionTests {
 		exists = pr.classExists("airplane", classes);
 		System.out.println("  classExists(\"airplane\", classes)");
 		System.out.println("  ->"+exists);
-		exists = pr.classExists("RentCar", "com.projectReflection");
-		System.out.println("  classExists(\"RentCar\", \"com.projectReflection\")");
+		exists = pr.classExists("RentCar", "bogle.projectReflection");
+		System.out.println("  classExists(\"RentCar\", \"bogle.projectReflection\")");
 		System.out.println("  ->"+exists);
-		exists = pr.classExists("airplane", "com.projectReflection");
-		System.out.println("  classExists(\"airplane\", \"com.projectReflection\")");
+		exists = pr.classExists("airplane", "bogle.projectReflection");
+		System.out.println("  classExists(\"airplane\", \"bogle.projectReflection\")");
 		System.out.println("  ->"+exists);
 
 		System.out.println("~~~~~~~~~~~~~~~");
@@ -43,8 +43,8 @@ public class OtherProjectReflectionTests {
 		System.out.println("~~~~~~~~~~~~~~~");
 		
 		System.out.println("\nTest getLoadedClassesFromPackage");
-		System.out.println("  getLoadedClassesFromPackage(\"com.projectReflection\")");
-		List<Class<?>> packClasses = pr.getLoadedClassesFromPackage("com.projectReflection");
+		System.out.println("  getLoadedClassesFromPackage(\"bogle.projectReflection\")");
+		List<Class<?>> packClasses = pr.getLoadedClassesFromPackage("bogle.projectReflection");
 		for (Class<?> c : packClasses) {
 			System.out.println("  ->"+c.toGenericString());
 		}
@@ -66,16 +66,16 @@ public class OtherProjectReflectionTests {
 		else {
 			System.out.println("  ->airplane not found");
 		}
-		theClass = pr.getClass("RentCar", "com.projectReflection");
-		System.out.println("  getClass(\"RentCar\", \"com.projectReflection\")");
+		theClass = pr.getClass("RentCar", "bogle.projectReflection");
+		System.out.println("  getClass(\"RentCar\", \"bogle.projectReflection\")");
 		if (theClass != null) {
 			System.out.println("  ->"+theClass.toGenericString());
 		} 
 		else {
 			System.out.println("  ->RentCar not found");
 		}
-		theClass = pr.getClass("airplane", "com.projectReflection");
-		System.out.println("  getClass(\"airplane\", \"com.projectReflection\")");
+		theClass = pr.getClass("airplane", "bogle.projectReflection");
+		System.out.println("  getClass(\"airplane\", \"bogle.projectReflection\")");
 		if (theClass != null) {
 			System.out.println("  ->"+theClass.toGenericString());
 		} 

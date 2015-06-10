@@ -1,9 +1,9 @@
-package com.projectReflection.test;
+package bogle.projectReflection.test;
 
 
 import java.util.List;
 
-import com.projectReflection.ProjectReflection;
+import bogle.projectReflection.ProjectReflection;
 
 /**
  * This file provides a simple example of how to map out the classes
@@ -31,8 +31,8 @@ public class ProjectMappingTest {
 		}
 
 		System.out.println("\nTest getClass - getting a potentially unloaded class");
-		System.out.println("  getClass(\"com.projectReflection.test.RentCar\")");
-		Class<?> klass = pr.getClass("com.projectReflection.test.RentCar");
+		System.out.println("  getClass(\"bogle.projectReflection.test.RentCar\")");
+		Class<?> klass = pr.getClass("bogle.projectReflection.test.RentCar");
 		if (klass != null) {
 			pr.CR.display(klass);
 		}

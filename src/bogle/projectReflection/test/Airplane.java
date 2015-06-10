@@ -1,4 +1,4 @@
-package com.projectReflection.test;
+package bogle.projectReflection.test;
 
 public class Airplane {
 

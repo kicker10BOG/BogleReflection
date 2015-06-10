@@ -1,4 +1,4 @@
-package com.projectReflection;
+package bogle.projectReflection;
 
 import java.io.File;
 import java.io.IOException;

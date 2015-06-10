@@ -1,4 +1,4 @@
-package com.projectReflection;
+package bogle.projectReflection;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

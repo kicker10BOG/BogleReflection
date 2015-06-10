@@ -1,2 +1,10 @@
 Manifest-Version: 1.0
+Created-By: Jason L. Bogle
+Name: bogle/projectReflection/
+Specification-Title: Project Reflection
+Specification-Version: 0.1
+Specification-Vendor: Jason L. Bogle
+Implementation-Title: bogle.projectReflection
+Implementation-Version: build1
+Implementation-Vendor: Jason L. Bogle
 

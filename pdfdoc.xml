@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
+<project default="pdfdoc">
+    <target name="pdfdoc">
         <javadoc 
         	access="private" 
         	classpath="." 
-        	packagenames="com.projectReflection"
+        	packagenames="bogle.projectReflection"
         	additionalparam="-pdf ./doc/documentation.pdf"
         	sourcepath="src">
         	
