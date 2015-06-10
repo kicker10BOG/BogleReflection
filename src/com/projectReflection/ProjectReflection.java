@@ -23,6 +23,9 @@ public class ProjectReflection {
 
 	private static final char SLASH = '/';
 	
+	/**
+	 * For easy access to the ClassReflection class
+	 */
 	public final ClassReflection CR = new ClassReflection();
 	
 	/**
@@ -289,8 +292,8 @@ public class ProjectReflection {
 			try {
 				ClassLoader scl = ClassLoader.getSystemClassLoader();
 				theClass = scl.loadClass(className);
-			} catch (Exception e) {
-				return null;
+			} catch (ClassNotFoundException e) {
+				//e.printStackTrace();
 			}
 		}
 		return theClass;
