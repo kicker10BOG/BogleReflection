@@ -182,7 +182,18 @@ public class ClassReflection {
 	public void display(Class<?> theClass) {
 		// Print class name
 		System.out.println(theClass.toGenericString());
-		
+		// Get child classes
+		try {
+			Class<?>[] childClasses = theClass.getDeclaredClasses();
+			if (childClasses.length > 0) {
+				System.out.println("  Child Classes:");
+				for (Class<?> c : childClasses) {
+					System.out.println("  -->"+c.toGenericString());
+				}
+			}
+		} catch (SecurityException e) {
+			//e.printStackTrace();
+		}
 		// Get fields
 		try {
 			Field[] fields = theClass.getDeclaredFields();
